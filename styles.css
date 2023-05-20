@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  line-height: 1.5;
+  background-color: #CD497B;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2px;
+}
+
+header {
+  background-color: #CD678E;
+  padding: 10px 0;
+}
+
+.logo img {
+  width: auto;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 30px;
+}
+
+.nombre-logo {
+  font-size: 24px;
+  font-weight: inherit;
+  color: #fff;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.menu {
+  list-style: none;
+  margin-left: 150px;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 60px;
+}
+
+.menu li:first-child {
+  margin-left: 0;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.headline {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subheadline {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.Membresias {
+  background-color: #CD497B;
+  padding: 40px 0;
+}
+
+ul {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.plan {
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  background-color: #EBBECE;
+  padding: 20px;
+  margin: 0 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.plan h3 {
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.plan ul {
+  list-style: none;
+  margin-bottom: 80px;
+}
+
+form label {
+  text-align: left;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.registration-form h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.registration-form {
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  background-color: #EBBECE;
+  padding: 50px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  line-height: 0.8;
+}
+
+.logo-registro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-registro img {
+  max-width: 300px;
+
+}
+
+.nombre-registro {
+  font-size: 36px;
+  font-weight: inherit;
+  color: #fff;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  text-align: left;
+  width: 300px;
+}
+
+.logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+}
+
+.logo {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-group input[type="submit"] {
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #442020;
+}
+
+.logo-registro-container {
+  display: inline-block;
+  width: 1000px;
+}
+
+.registration-form-container {
+  display:  inline-block;
+  margin-top: 50px;
+}

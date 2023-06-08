@@ -24,8 +24,72 @@
       </div>
     </nav>
   </header>
+  <section class="hero">
+    <div class="cuerpo">
+      <h1>¿Quiénes somos?</h1>
+      <p>¡Hola, nosotros somos Cota Dreamers! Estamos aquí para ayudarte a alcanzar tus metas de salud.
+        Somos una startup de salud intuitiva y de alta calidad que ofrece soluciones innovadoras 
+        para cubrir tus necesidades básicas y preventivas. Nuestro objetivo principal es desarrollar 
+        tus metas propuestas al máximo y promover el proyecto en todo el sector salud. Estamos 
+        seguros de que nuestras soluciones te llevarán a alcanzar tus objetivos de salud. 
+        ¡Únete a nosotros y descubre la diferencia que Cota Dreamers puede hacer en tu vida!</p>
+        <h2>Integrantes</h2>
+ 
+    </div>
+  </section>
+  
+  <div class="gallery">
+    <div class="gallery-item" onclick="voltearIntegrante(this)">
+      <div class="front">
+        <img src="images/gato1.jpeg" alt="Integrante 1">
+      </div>
+      <div class="back">
+        <span>Gabriel Bernal</span>
+        <span>Ingeniería de Software</span>
+      </div>
+    </div>
+    
+    <div class="gallery-item" onclick="voltearIntegrante(this)">
+      <div class="front">
+        <img src="images/gato2.jpeg" alt="Integrante 2">
+      </div>
+      <div class="back">
+        <span>Deyci Huaman</span>
+        <span>Ingeniería de Sistemas de Información</span>
+      </div>
+    </div>
+    
+    <div class="gallery-item" onclick="voltearIntegrante(this)">
+      <div class="front">
+        <img src="images/gato3.jpeg" alt="Integrante 3">
+      </div>
+      <div class="back">
+        <span>Sebastián </span>
+        <span>Ramírez</span>
+        <span>Ing. de Software</span>
+      </div>
+    </div>
+    
+    <!-- no olvidar agregar 3 más-->
+  </div>
 
-
+  <script>
+    function voltearIntegrante(item) {
+      item.classList.toggle("flipped");
+    }
+  </script>
   
 </body>
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <ul>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 </html>

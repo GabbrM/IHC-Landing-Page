@@ -15,11 +15,11 @@
         </a>
         <a class="nombre-logo">MEDICFY</a>
         <ul class="menu">
-          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="{{ url_for('index') }}">Inicio</a></li>
           <li><a href="#">¿Quiénes somos?</a></li>
-          <li><a href="membresias.html">Membresías</a></li>
-          <li><a href="registro.html">Registrarse</a></li>
-          <li><a href="iniciar-sesion.html">Iniciar Sesión</a></li>
+          <li><a href="{{ url_for('membresias') }}">Membresías</a></li>
+          <li><a href="{{ url_for('registro') }}">Registrarse</a></li>
+          <li><a href="{{ url_for('inicio') }}">Iniciar Sesión</a></li>
         </ul>
       </div>
     </nav>
@@ -41,7 +41,7 @@
   <div class="gallery">
     <div class="gallery-item" onclick="voltearIntegrante(this)">
       <div class="front">
-        <img src="images/integrante1.png" alt="Integrante 1">
+        <img src="{{ url_for('static', filename='images/integrante1.png') }}" alt="Integrante 1">
       </div>
       <div class="back">
         <span>Gabriel Bernal</span>
@@ -51,7 +51,7 @@
     
     <div class="gallery-item" onclick="voltearIntegrante(this)">
       <div class="front">
-        <img src="images/integrante2.png" alt="Integrante 2">
+        <img src="{{ url_for('static', filename='images/integrante2.png') }}" alt="Integrante 2">
       </div>
       <div class="back">
         <span>Deyci Huaman</span>
@@ -61,7 +61,7 @@
     
     <div class="gallery-item" onclick="voltearIntegrante(this)">
       <div class="front">
-        <img src="images/integrante3.png" alt="Integrante 3">
+        <img src="{{ url_for('static', filename='images/integrante3.png') }}" alt="Integrante 3">
       </div>
       <div class="back">
         
@@ -74,7 +74,7 @@
   <div class="gallery">
     <div class="gallery-item" onclick="voltearIntegrante(this)">
       <div class="front">
-        <img src="images/integrante4.png" alt="Integrante 4">
+        <img src="{{ url_for('static', filename='images/integrante4.png') }}" alt="Integrante 4">
       </div>
       <div class="back">
         <span>Mario Gonzales</span>
@@ -84,7 +84,7 @@
     
     <div class="gallery-item" onclick="voltearIntegrante(this)">
       <div class="front">
-        <img src="images/integrante5.png" alt="Integrante 5">
+        <img src="{{ url_for('static', filename='images/integrante5.png') }}" alt="Integrante 5">
       </div>
       <div class="back">
         <span>Dayanna</span>
@@ -95,7 +95,7 @@
     
     <div class="gallery-item" onclick="voltearIntegrante(this)">
       <div class="front">
-        <img src="images/integrante6.png" alt="Integrante 6">
+        <img src="{{ url_for('static', filename='images/integrante6.png') }}" alt="Integrante 6">
       </div>
       <div class="back">
         <span>Alejandro Rojas</span>

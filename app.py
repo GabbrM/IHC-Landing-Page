@@ -74,9 +74,17 @@ def menu():
 def recordatorios():
     return render_template('recordatorios.html')
 
-@app.route('/registro_exitoso')
-def registro_exitoso():
-    return render_template('registro_exitoso.html')
+@app.route('/integrantes')
+def integrantes():
+    return render_template('quienes-somos.html')
+
+@app.route('/index')
+def index():
+    return render_template('inicio.html')
+
+@app.route('/membresias')
+def membresias():
+    return render_template('membresias.html')
 
 if __name__ == '__main__':
     app.run()

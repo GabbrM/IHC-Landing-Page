@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recordatorios - MEDICFY</title>
-  <link rel="stylesheet" type="text/css" href="func.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/recordatorios.css') }}">
 </head>
 <body>
   <header>
     <nav>
       <div class="container">
         <a class="logo">
-          <img src="images/medicfy-logo.png" alt="Logo de MEDICFY">
+          <img src="{{ url_for('static', filename='images/medicfy-logo.png') }}" alt="Logo de MEDICFY">
         </a>
         <a class="nombre-logo">MEDICFY</a>
         <ul class="menu">
@@ -37,6 +37,6 @@
   
   <div id="reminder-list"></div>
   
-  <script src="script.js"></script>
+  <script src="{{ url_for('static', filename='js/recordatorios.js') }}"></script>
 </body>
 </html>

@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Membresias - MEDICFY</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
   <header>
     <nav>
       <div class="container">
         <a class="logo">
-          <img src="images/medicfy-logo.png" alt="Logo de MEDICFY">
+          <img src="{{ url_for('static', filename='images/medicfy-logo.png') }}" alt="Logo de MEDICFY">
         </a>
         <a class="nombre-logo">MEDICFY</a>
         <ul class="menu">

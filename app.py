@@ -1,8 +1,10 @@
 from pymongo import MongoClient
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 
+# Establecer la cadena de conexión de Atlas
+connection_string = "mongodb+srv://heyshaske:medicfy@cluster0.ksrc8pi.mongodb.net/"
 
-client = MongoClient('mongodb://localhost:27017/')
+client = MongoClient(connection_string)
 db = client['test']  
 users_collection = db['registro_usuarios'] 
 
@@ -11,23 +13,30 @@ app = Flask(__name__)
 
 @app.route('/registro', methods=['GET'])
 def registro():
-    return render_template('registro.html') 
+    return render_template('registro.html', registro_exitoso=False)
+
 
 
 @app.route('/register', methods=['POST'])
 def register():
-  
-    username = request.form['username']
+    first_name = request.form['first-name']
+    last_name = request.form['last-name']
     email = request.form['email']
     password = request.form['password']
+    confirm_password = request.form['confirm-password']
     
-   
-    if users_collection.find_one({'username': username}):
+    #verificar si el usuario ya existe en la base de datos
+    if users_collection.find_one({'email': email}):
         return 'El usuario ya existe'
     
-
+    #verificar si las contraseñas coinciden
+    if password != confirm_password:
+        return 'Las contraseñas no coinciden'
+    
+    #crear un nuevo documento para el usuario
     new_user = {
-        'username': username,
+        'first_name': first_name,
+        'last_name': last_name,
         'email': email,
         'password': password
     }
@@ -35,22 +44,39 @@ def register():
     # Insertar el nuevo usuario en la colección
     users_collection.insert_one(new_user)
     
-    return 'Registro exitoso'
+    return render_template('registro.html', registro_exitoso=True)
 
 # Ruta para el inicio de sesión de usuarios
 @app.route('/login', methods=['POST'])
 def login():
     # Obtener los datos del formulario de inicio de sesión
-    username = request.form['username']
+    email = request.form['email']
     password = request.form['password']
     
     # Verificar las credenciales del usuario en la base de datos
-    user = users_collection.find_one({'username': username, 'password': password})
+    user = users_collection.find_one({'email': email, 'password': password})
     if user:
-        return 'Inicio de sesión exitoso'
+        return redirect(url_for('menu'))
     else:
-        return 'Credenciales inválidas'
+        return render_template('iniciar-sesion.html', error='Credenciales inválidas')
 
+
+@app.route('/inicio')
+def inicio():
+    return render_template('iniciar-sesion.html')
+
+
+@app.route('/menu')
+def menu():
+    return render_template('menu.html')
+
+@app.route('/recordatorios')
+def recordatorios():
+    return render_template('recordatorios.html')
+
+@app.route('/registro_exitoso')
+def registro_exitoso():
+    return render_template('registro_exitoso.html')
 
 if __name__ == '__main__':
     app.run()

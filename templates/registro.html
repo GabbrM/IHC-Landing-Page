@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro - MEDICFY</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
   <header>
     <nav>
       <div class="container">
         <a class="logo">
-          <img src="images/medicfy-logo.png" alt="Logo de MEDICFY">
+          <img src="{{ url_for('static', filename='images/medicfy-logo.png') }}" alt="Logo de MEDICFY">
         </a>
         <a class="nombre-logo">MEDICFY</a>
         <ul class="menu">
@@ -29,7 +29,7 @@
     <div class="logo-registro-container">
       <a class="nombre-registro">Bienvenido a</a>
       <div class="logo-registro">
-        <img src="images/medicfy-logo.png" alt="Logo">
+        <img src="{{ url_for('static', filename='images/medicfy-logo.png') }}" alt="Logo">
       </div>
       <a class="nombre-registro">MEDICFY</a>
     </div>
@@ -37,7 +37,7 @@
       <div class="registration-form">
         <div class="form-container">
           <h2>Registrarse</h2>
-          <form class="form">
+          <form action="{{ url_for('register') }}" method="POST" class="form">
             <div class="form-group">
               <label for="first-name">Nombre:</label>
               <input type="text" id="first-name" name="first-name" required>
@@ -67,6 +67,14 @@
     </div>
   </main>
 
+  <div id="cuadro-exito" class="oculto" data-registro-exitoso="{{ registro_exitoso }}">
+    <h2>Registro exitoso</h2>
+    <p>¡Te has registrado exitosamente en MEDICFY!</p>
+    <button onclick="ocultarCuadroExito()">Aceptar</button>
+  </div>
+  
+  <script src="{{ url_for('static', filename='js/registro.js') }}"></script>
+  
 </body>
 <footer>
   <div class="container">

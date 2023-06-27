@@ -8,8 +8,7 @@ client = MongoClient(connection_string)
 db = client['test']  
 users_collection = db['registro_usuarios'] 
 
-app = Flask(__name__)
-
+app = Flask(__name__, template_folder='docs/templates')
 
 @app.route('/registro', methods=['GET'])
 def registro():
@@ -78,7 +77,7 @@ def recordatorios():
 def integrantes():
     return render_template('quienes-somos.html')
 
-@app.route('/index')
+@app.route('/')
 def index():
     return render_template('index.html')
 

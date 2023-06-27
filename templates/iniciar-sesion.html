@@ -3,51 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro - MEDICFY</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Iniciar sesión - MEDICFY</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
   <header>
     <nav>
       <div class="container">
         <a class="logo">
-          <img src="images/medicfy-logo.png" alt="Logo de MEDICFY">
+          <img src="{{ url_for('static', filename='images/medicfy-logo.png') }}" alt="Logo de MEDICFY">
         </a>
         <a class="nombre-logo">MEDICFY</a>
         <ul class="menu">
-          <li><a href="inicio.html">Inicio</a></li>
-          <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
-          <li><a href="membresias.html">Membresías</a></li>
-          <li><a href="#">Registrarse</a></li>
-          <li><a href="iniciar-sesion.html">Iniciar Sesión</a></li>
+          <li><a href="{{ url_for('index') }}">Inicio</a></li>
+          <li><a href="{{ url_for('integrantes') }}">¿Quiénes somos?</a></li>
+          <li><a href="{{ url_for('membresias') }}">Membresías</a></li>
+          <li><a href="{{ url_for('registro') }}">Registrarse</a></li>
+          <li><a href="#">Iniciar Sesión</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <main>
-    <div class="logo-registro-container">
+
+<main>
+    <div class="logo-login-container">
       <a class="nombre-registro">Bienvenido a</a>
       <div class="logo-registro">
-        <img src="images/medicfy-logo.png" alt="Logo">
+        <img src="{{ url_for('static', filename='images/medicfy-logo.png') }}" alt="Logo">
       </div>
       <a class="nombre-registro">MEDICFY</a>
     </div>
     <div class="registration-form-container">
-      <div class="registration-form">
+      <div class="login-form">
         <div class="form-container">
-          <h2>Registrarse</h2>
-          <form class="form">
+          <h2>Iniciar sesión</h2>
+          <form class="form" action="{{ url_for('login') }}" method="POST">
             <div class="form-group">
-              <label for="first-name">Nombre:</label>
-              <input type="text" id="first-name" name="first-name" required>
-            </div>
-            <div class="form-group">
-              <label for="last-name">Apellido:</label>
-              <input type="text" id="last-name" name="last-name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email:</label>
+              <label for="email">Correo electrónico:</label>
               <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
@@ -55,13 +48,12 @@
               <input type="password" id="password" name="password" required>
             </div>
             <div class="form-group">
-              <label for="confirm-password">Confirmar contraseña:</label>
-              <input type="password" id="confirm-password" name="confirm-password" required>
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Registrarse">
+              <input type="submit" value="Iniciar sesión">
             </div>
           </form>
+          {% if error %}
+            <p class="error-message">{{ error }}</p>
+          {% endif %}
         </div>
       </div>
     </div>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recordatorios - MEDICFY</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <a class="logo">
+          <img src="{{ url_for('static', filename='images/medicfy-logo.png') }}" alt="Logo de MEDICFY">
+        </a>
+        <a class="nombre-logo">MEDICFY</a>
+        <ul class="menu">
+          <li><a href="{{ url_for('index') }}">Inicio</a></li>
+          <li><a href="{{ url_for('integrantes') }}">¿Quiénes somos?</a></li>
+          <li><a href="{{ url_for('membresias') }}">Membresías</a></li>
+          <li><a href="{{ url_for('registro') }}">Registrarse</a></li>
+          <li><a href="#">Mi cuenta</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <h1>¿Qué desea hacer?</h1>
+
+  <div class="functional-buttons">
+    <div class="button-container">
+      <a href="{{ url_for('recordatorios') }}">
+        <img src="{{ url_for('static', filename='images/recordatorio-button.svg') }}" alt="Botón de Recordatorios">
+        <span>Recordatorios</span>
+      </a>
+    </div>
+    <div class="button-container">
+      <a href="#">
+        <img src="{{ url_for('static', filename='images/citas-medicas-button.svg') }}" alt="Botón de Citas Médicas">
+        <span>Citas Médicas</span>
+      </a>
+    </div>
+    <div class="button-container">
+      <a href="#">
+        <img src="{{ url_for('static', filename= 'images/consultas-button.svg') }}" alt="Botón de Consultas">
+        <span>Consultas</span>
+      </a>
+    </div>
+    <div class="button-container">
+      <a href="#">
+        <img src="{{ url_for('static', filename='images/centros-de-salud-button.svg') }}" alt="Botón de Centros de Salud">
+        <span>Centros de Salud</span>
+      </a>
+    </div>
+  </div>
+  
+
+</body>
+</html>

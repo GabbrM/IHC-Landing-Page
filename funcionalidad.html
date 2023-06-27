@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recordatorios - MEDICFY</title>
+  <link rel="stylesheet" type="text/css" href="func.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <a class="logo">
+          <img src="images/medicfy-logo.png" alt="Logo de MEDICFY">
+        </a>
+        <a class="nombre-logo">MEDICFY</a>
+        <ul class="menu">
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+          <li><a href="membresias.html">Membresías</a></li>
+          <li><a href="registro.html">Registrarse</a></li>
+          <li><a href="#">Mi cuenta</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="container2">
+    <h1 class="title">Recordatorios de Medicamentos</h1>
+    <form id="reminder-form">
+      <input type="text" id="medicine-name" placeholder="Nombre del medicamento" required>
+      <input type="text" id="dosage" placeholder="Dosis" required>
+      <input type="time" id="reminder-time" required>
+      <button type="submit">Agregar Recordatorio</button>
+    </form>
+  </div>
+  
+  
+  <div id="reminder-list"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

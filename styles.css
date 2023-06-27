@@ -400,8 +400,49 @@ footer {
   margin-top: 10px;
   padding: 5px 10px;
   border: none;
-  background-color: #000000;
   color: #fff;
   cursor: pointer;
+}
+
+.functional-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.functional-buttons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.functional-buttons span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #f6dcf2;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #f6dcf2;
+}
+
+.button-container {
+  display: inline-block;
+  border: 1px solid #EBBECE;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.button-container img {
+  display: block;
+  width: 150px;
+  height: 150px;
   
 }
